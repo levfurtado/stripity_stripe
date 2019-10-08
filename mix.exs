@@ -46,7 +46,7 @@ defmodule Stripe.Mixfile do
 
   defp env() do
     [
-      api_base_url: "https://localhost:12112/v1/",
+      api_base_url: "https://#{System.get_env("STRIPE_URL"}:12112/v1/",
       api_upload_url: "https://files.stripe.com/v1/",
       pool_options: [
         timeout: 5_000,
